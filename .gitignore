@@ -1,0 +1,7 @@
+*.DotSettings.user
+.idea/
+[Bb]in/
+[Dd]ebug/
+[Oo]bj/
+[Rr]elease/
+x64/

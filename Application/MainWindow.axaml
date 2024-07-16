@@ -1,0 +1,29 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:application="clr-namespace:Application"
+        mc:Ignorable="d"
+        d:DesignWidth="800"
+        d:DesignHeight="450"
+        x:Class="Application.MainWindow"
+        x:DataType="application:MainWindow"
+        Title="Application">
+    <ScrollViewer ScrollChanged="ScrollViewer_OnScrollChanged">
+        <ItemsControl Name="Items" ItemsSource="{Binding ItemsSource}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate DataType="application:Model">
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <TextBlock Text="{Binding Id}" />
+                        <TextBlock Text="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <application:MyVirtualizingStackPanel Name="VPanel" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+    </ScrollViewer>
+</Window>
