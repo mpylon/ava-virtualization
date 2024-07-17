@@ -21,7 +21,7 @@
             </ItemsControl.ItemTemplate>
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <application:MyVirtualizingStackPanel Name="VPanel" />
+                    <VirtualizingStackPanel Name="VPanel" />
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
         </ItemsControl>
